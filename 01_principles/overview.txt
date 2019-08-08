@@ -1,0 +1,37 @@
+What makes a continuous integration pipeline 
+
+Repeatable reliable process 
+Playbooks of deployment in each organization should be same.
+
+Automate everything 
+Playbook tasks should be automated and not runned by human activity.
+
+Version control 
+System to enable developers to collaborate on a shared code base.
+
+Build in quality 
+Quality is integrated into every step of the release pipeline.
+Project planning for new feature releases should include considerations around 
+analytics, performance monitoring, and automated testing instrumentation tasks.
+
+Do the hardest parts first
+Painful, time-consuming or error-prone tasks compound over time.
+So fixing these saves time for the customers and are a great win and therefore 
+should be done first. Helps identifying weaknesses in the organizational 
+process. 
+
+Everyone is responsible 
+Active planning by product managers and the security team as well as the devs 
+for deplyoment and production realease is required.
+
+"Done" means released 
+CD means ship the software to the end user and not "it works on my machine".
+
+Continuous improvement 
+The feedback loop is the heart of CD. 
+
+Continuous delivery value
+
+Getting started with continuous delivery 
+Continuous Integration is the precursor to continuous delivery and the 
+correct point to start with a continuous delivery pipeline.

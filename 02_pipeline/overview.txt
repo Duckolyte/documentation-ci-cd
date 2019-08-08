@@ -1,0 +1,71 @@
+Waht is a CD pipeline?
+Automation of builds, tests and deployment are orchestrated as one release
+workflow.
+Long story short. It is  a set of steps your code changes will go through to 
+make their way to production.
+
+
+Phases in a CD pipeline
+
+1. component phase 
+Pipeline first builds components as the smallest distributable, testable units 
+of the product.
+Components can be certified by 
+Code reviews
+Unit tests 
+Static code analysis 
+(memory leaks, code cyclomatic complexity, code duplication)
+
+2. subsystem phase 
+Loosly coupled components make up a subsystem. 
+E.g. Microservices in a container or a server is a container and DBs. 
+Can be validated against customer use cases.
+Functional tests include use cases tests of 
+internationalization
+localisation 
+data quality 
+accessabitlity 
+negative scenarios
+Secures the product functions the way the customer expects.
+Secures performance benchmarks determined with customers.
+Secures system security by dynamic analysis securty testing (DAST).   
+
+3. system phase
+Subsystems are composed into a system to be released as a whole.
+Should create a standard change request CR and deploy to staaging.
+Here a system can be validated by 
+integration 
+performance 
+security 
+tests. Dont make mocks or stubs during testing.
+Focus on network and interfaces.
+
+4. production phase
+ZDD (zero downtime deployment) is the goal.
+E.g. Blue-Green Deployment. In the population there is deployed the new 
+release to a tiny part called cross section (green). The blue part of the 
+population is the bulk part and keeps the old version. 
+If push comes to shove, revert everyone back to “blue” and very few customers 
+will be affected, if any. If things look good on “green”, dial everyone up 
+slowly from “blue” to “green”.
+continuous delivery 
+    allows manual gates (push button deployment, CAB(change approval board))
+continuous deployment
+    does not allow any manual deployment
+    everything is automatic 
+@TODO 
+good place to do smoke tests 
+WHAT ARE SMOKE TESTS?
+
+Shift Left 
+Means that validations being pulled earlier in the pipeline. 
+Found errors in a test environment are easier to fix than 
+in the staging env and those easier than in production env.
+
+continuous delivery is the new normal 
+needs continuous integration and continuous testing well 
+gains 
+quality, frequently and predictability 
+
+
+
